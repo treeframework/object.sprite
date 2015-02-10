@@ -4,7 +4,15 @@ The `sprite` object simply creates spriting element abstraction.
 
 Install using Bower:
 
-    $ bower install --save tree-sprite
+```sh
+$ bower install tree-sprite --save
+```
+
+Install using npm:
+
+```sh
+$ npm install tree-sprite --save
+```
 
 ## Credits
 
