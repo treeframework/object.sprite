@@ -1,38 +1,49 @@
-// *************************************
+// =============================================================================
 //
-//   #SPRITE
+// Name:          Sprite
 //
-// *************************************
+// Description:   Simple spriting element abstraction.
+//
+// Block:         `o-sprite`
+//
+//
+// Markup:
+//
+// <i class="o-sprite">....</i>
+//
+// =============================================================================
 
-// A simple spriting element abstraction.
 
-// Predefine the variables bellow in order to alter and enable specific features.
+
+
+
+// Variables
+// =============================================================================
+
+// Predefine the variables bellow in order to alter and enable specific
+// features.
+
 $tree-sprite-namespace:    $tree-namespace !default;
 
-$tree-enable-sprite:       false !default;
 
 
 
 
+// 1. The default width of most icons on the web. Override as necessary.
+// 2. Align all sprites to the middles of whatever content they are alongside.
+// 3. Although we have used `vertical-align: middle;`, we often need to nudge
+//    sprites up by a pixel to have them look correct optically.
+// 4. Hide any text that we might be image-replacing.
 
-@if ($tree-enable-sprite == true) {
-
-    // 1. The default width of most icons on the web. Override as necessary.
-    // 2. Align all sprites to the middles of whatever content they are alongside.
-    // 3. Although we have used `vertical-align: middle;`, we often need to nudge
-    //    sprites up by a pixel to have them look correct optically.
-    // 4. Hide any text that we might be image-replacing.
-    .#{$tree-sprite-namespace}sprite,
-    %#{$tree-sprite-namespace}sprite {
-        display: inline-block;
-        width:  16px; // [1]
-        height: 16px; // [1]
-        vertical-align: middle; // [2]
-        position: relative; // [3]
-        top: -1px; // [3]
-        white-space: nowrap; // [4]
-        overflow: hidden; // [4]
-        text-indent: 100%; // [4]
-    }
-
+.#{$tree-sprite-namespace}o-sprite {
+    display: inline-block;
+    width:  16px; // [1]
+    height: 16px; // [1]
+    vertical-align: middle; // [2]
+    position: relative; // [3]
+    top: -1px; // [3]
+    white-space: nowrap; // [4]
+    overflow: hidden; // [4]
+    text-indent: 100%; // [4]
 }
+
